@@ -8,28 +8,21 @@ local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
 local Frame = Instance.new("Frame")
-local ColorPicker = Instance.new("Frame")
-local RGB = Instance.new("ImageLabel")
-local Marker = Instance.new("Frame")
-local Preview = Instance.new("ImageLabel")
-local Value = Instance.new("ImageLabel")
-local Marker_2 = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
 local SideBar = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local ESP = Instance.new("ImageButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local Mods = Instance.new("ImageButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
 local Tabs = Instance.new("Frame")
 local Mods_2 = Instance.new("Frame")
 local UIGridLayout = Instance.new("UIGridLayout")
-local norecoil = Instance.new("TextButton")
+local INFAMMO = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local fastfire = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
-local INFAMMO = Instance.new("TextButton")
+local norecoil = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
 local ESP_2 = Instance.new("Frame")
 local UIGridLayout_2 = Instance.new("UIGridLayout")
@@ -40,7 +33,16 @@ local DistanceESP = Instance.new("TextButton")
 local TextLabel_5 = Instance.new("TextLabel")
 local NameESP = Instance.new("TextButton")
 local TextLabel_6 = Instance.new("TextLabel")
+local Tracers = Instance.new("TextButton")
 local TextLabel_7 = Instance.new("TextLabel")
+local ColorPicker = Instance.new("Frame")
+local RGB = Instance.new("ImageLabel")
+local Marker = Instance.new("Frame")
+local Preview = Instance.new("ImageLabel")
+local Value = Instance.new("ImageLabel")
+local Marker_2 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
 local Mouse = Instance.new("Frame")
 
 --Properties:
@@ -55,6 +57,7 @@ MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 MainFrame.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
 MainFrame.Position = UDim2.new(0.520061553, 0, 0.5, 0)
 MainFrame.Size = UDim2.new(0, 606, 0, 306)
+MainFrame.Visible = false
 
 UICorner.Parent = MainFrame
 
@@ -75,81 +78,13 @@ Frame.BackgroundTransparency = 1.000
 Frame.Position = UDim2.new(0.110320285, 0, 0, 0)
 Frame.Size = UDim2.new(0, 500, 0, 306)
 
-ColorPicker.Name = "ColorPicker"
-ColorPicker.Parent = Frame
-ColorPicker.AnchorPoint = Vector2.new(0.5, 0.5)
-ColorPicker.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-ColorPicker.Position = UDim2.new(0.32145074, 0, 0.232809767, 0)
-ColorPicker.Size = UDim2.new(0.180038244, 0, 0.176759526, 0)
-ColorPicker.SizeConstraint = Enum.SizeConstraint.RelativeXX
-ColorPicker.Visible = false
-ColorPicker.ZIndex = 999999999
-
-RGB.Name = "RGB"
-RGB.Parent = ColorPicker
-RGB.AnchorPoint = Vector2.new(0.5, 0)
-RGB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RGB.BorderColor3 = Color3.fromRGB(40, 40, 40)
-RGB.BorderSizePixel = 2
-RGB.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
-RGB.Size = UDim2.new(0.600000024, 0, 0.600000024, 0)
-RGB.ZIndex = 500000000
-RGB.Image = "rbxassetid://1433361550"
-RGB.SliceCenter = Rect.new(10, 10, 90, 90)
-
-Marker.Name = "Marker"
-Marker.Parent = RGB
-Marker.AnchorPoint = Vector2.new(0.5, 0.5)
-Marker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Marker.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Marker.BorderSizePixel = 2
-Marker.Position = UDim2.new(0.5, 0, 1, 0)
-Marker.Size = UDim2.new(0, 4, 0, 4)
-Marker.ZIndex = 500000000
-
-Preview.Name = "Preview"
-Preview.Parent = ColorPicker
-Preview.AnchorPoint = Vector2.new(0.5, 0)
-Preview.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Preview.BorderColor3 = Color3.fromRGB(40, 40, 40)
-Preview.BorderSizePixel = 2
-Preview.Position = UDim2.new(0.5, 0, 0.800000012, 0)
-Preview.Size = UDim2.new(0.600000024, 0, 0.100000001, 0)
-Preview.ZIndex = 4
-Preview.SliceCenter = Rect.new(10, 10, 90, 90)
-
-Value.Name = "Value"
-Value.Parent = ColorPicker
-Value.AnchorPoint = Vector2.new(0.5, 0)
-Value.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Value.BorderColor3 = Color3.fromRGB(40, 40, 40)
-Value.BorderSizePixel = 2
-Value.Position = UDim2.new(0.850000024, 0, 0.100000001, 0)
-Value.Size = UDim2.new(0.100000001, 0, 0.600000024, 0)
-Value.ZIndex = 500000000
-Value.Image = "rbxassetid://359311684"
-Value.SliceCenter = Rect.new(10, 10, 90, 90)
-
-Marker_2.Name = "Marker"
-Marker_2.Parent = Value
-Marker_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Marker_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Marker_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Marker_2.BorderSizePixel = 2
-Marker_2.Position = UDim2.new(0.5, 0, 0, 0)
-Marker_2.Size = UDim2.new(1, 4, 0, 2)
-Marker_2.ZIndex = 500000000
-
-UICorner_2.CornerRadius = UDim.new(0, 25)
-UICorner_2.Parent = ColorPicker
-
 SideBar.Name = "SideBar"
 SideBar.Parent = Frame
 SideBar.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 SideBar.Position = UDim2.new(-0.134000003, 0, 0, 0)
 SideBar.Size = UDim2.new(0, 55, 0, 306)
 
-UICorner_3.Parent = SideBar
+UICorner_2.Parent = SideBar
 
 ESP.Name = "ESP"
 ESP.Parent = SideBar
@@ -158,7 +93,7 @@ ESP.Position = UDim2.new(0.272727281, 0, 0.081699349, 0)
 ESP.Size = UDim2.new(0, 50, 0, 50)
 ESP.Image = "http://www.roblox.com/asset/?id=6332979678"
 
-UICorner_4.Parent = ESP
+UICorner_3.Parent = ESP
 
 Mods.Name = "Mods"
 Mods.Parent = SideBar
@@ -167,7 +102,7 @@ Mods.Position = UDim2.new(0.272727281, 0, 0.33006537, 0)
 Mods.Size = UDim2.new(0, 50, 0, 50)
 Mods.Image = "http://www.roblox.com/asset/?id=6332978803"
 
-UICorner_5.Parent = Mods
+UICorner_4.Parent = Mods
 
 UIListLayout.Parent = SideBar
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -186,29 +121,30 @@ Mods_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Mods_2.BackgroundTransparency = 1.000
 Mods_2.Position = UDim2.new(-0.0140000004, 0, 0, 0)
 Mods_2.Size = UDim2.new(1.01400006, 0, 1, 0)
+Mods_2.Visible = false
 
 UIGridLayout.Parent = Mods_2
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.CellPadding = UDim2.new(0, 175, 0, 15)
 UIGridLayout.CellSize = UDim2.new(0, 25, 0, 25)
 
-norecoil.Name = "norecoil"
-norecoil.Parent = Mods_2
-norecoil.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-norecoil.BorderSizePixel = 0
-norecoil.Size = UDim2.new(0, 200, 0, 50)
-norecoil.Font = Enum.Font.SourceSans
-norecoil.Text = ""
-norecoil.TextColor3 = Color3.fromRGB(0, 0, 0)
-norecoil.TextSize = 14.000
+INFAMMO.Name = "INFAMMO"
+INFAMMO.Parent = Mods_2
+INFAMMO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFAMMO.BorderSizePixel = 0
+INFAMMO.Size = UDim2.new(0, 200, 0, 50)
+INFAMMO.Font = Enum.Font.SourceSans
+INFAMMO.Text = ""
+INFAMMO.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFAMMO.TextSize = 14.000
 
-TextLabel.Parent = norecoil
+TextLabel.Parent = INFAMMO
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(1, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 137, 0, 25)
 TextLabel.Font = Enum.Font.Ubuntu
-TextLabel.Text = "No Recoil"
+TextLabel.Text = "Inf Ammo"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -236,23 +172,23 @@ TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextWrapped = true
 
-INFAMMO.Name = "INFAMMO"
-INFAMMO.Parent = Mods_2
-INFAMMO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-INFAMMO.BorderSizePixel = 0
-INFAMMO.Size = UDim2.new(0, 200, 0, 50)
-INFAMMO.Font = Enum.Font.SourceSans
-INFAMMO.Text = ""
-INFAMMO.TextColor3 = Color3.fromRGB(0, 0, 0)
-INFAMMO.TextSize = 14.000
+norecoil.Name = "norecoil"
+norecoil.Parent = Mods_2
+norecoil.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+norecoil.BorderSizePixel = 0
+norecoil.Size = UDim2.new(0, 200, 0, 50)
+norecoil.Font = Enum.Font.SourceSans
+norecoil.Text = ""
+norecoil.TextColor3 = Color3.fromRGB(0, 0, 0)
+norecoil.TextSize = 14.000
 
-TextLabel_3.Parent = INFAMMO
+TextLabel_3.Parent = norecoil
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.Position = UDim2.new(1, 0, 0, 0)
 TextLabel_3.Size = UDim2.new(0, 137, 0, 25)
 TextLabel_3.Font = Enum.Font.Ubuntu
-TextLabel_3.Text = "Inf Ammo"
+TextLabel_3.Text = "No Recoil"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14.000
@@ -264,7 +200,6 @@ ESP_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ESP_2.BackgroundTransparency = 1.000
 ESP_2.Position = UDim2.new(-0.0140000004, 0, 0, 0)
 ESP_2.Size = UDim2.new(1.01400006, 0, 1, 0)
-ESP_2.Visible = false
 
 UIGridLayout_2.Parent = ESP_2
 UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
@@ -344,17 +279,107 @@ TextLabel_6.TextScaled = true
 TextLabel_6.TextSize = 14.000
 TextLabel_6.TextWrapped = true
 
-TextLabel_7.Parent = MainFrame
+Tracers.Name = "Tracers"
+Tracers.Parent = ESP_2
+Tracers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tracers.BorderSizePixel = 0
+Tracers.Size = UDim2.new(0, 200, 0, 50)
+Tracers.Font = Enum.Font.SourceSans
+Tracers.Text = ""
+Tracers.TextColor3 = Color3.fromRGB(0, 0, 0)
+Tracers.TextSize = 14.000
+
+TextLabel_7.Parent = Tracers
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.Position = UDim2.new(0.334983498, 0, 0.954248369, 0)
-TextLabel_7.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_7.Position = UDim2.new(1, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 137, 0, 25)
 TextLabel_7.Font = Enum.Font.Ubuntu
-TextLabel_7.Text = "Contax V1.2.0"
+TextLabel_7.Text = "Tracers"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 14.000
 TextLabel_7.TextWrapped = true
+
+ColorPicker.Name = "ColorPicker"
+ColorPicker.Parent = Tabs
+ColorPicker.AnchorPoint = Vector2.new(0.5, 0.5)
+ColorPicker.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+ColorPicker.Position = UDim2.new(0.32145074, 0, 0.232809767, 0)
+ColorPicker.Size = UDim2.new(0.180038244, 0, 0.176759526, 0)
+ColorPicker.SizeConstraint = Enum.SizeConstraint.RelativeXX
+ColorPicker.Visible = false
+ColorPicker.ZIndex = 999999999
+
+RGB.Name = "RGB"
+RGB.Parent = ColorPicker
+RGB.AnchorPoint = Vector2.new(0.5, 0)
+RGB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RGB.BorderColor3 = Color3.fromRGB(40, 40, 40)
+RGB.BorderSizePixel = 2
+RGB.Position = UDim2.new(0.400000006, 0, 0.100000001, 0)
+RGB.Size = UDim2.new(0.600000024, 0, 0.600000024, 0)
+RGB.ZIndex = 500000000
+RGB.Image = "rbxassetid://1433361550"
+RGB.SliceCenter = Rect.new(10, 10, 90, 90)
+
+Marker.Name = "Marker"
+Marker.Parent = RGB
+Marker.AnchorPoint = Vector2.new(0.5, 0.5)
+Marker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Marker.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Marker.BorderSizePixel = 2
+Marker.Position = UDim2.new(0.5, 0, 1, 0)
+Marker.Size = UDim2.new(0, 4, 0, 4)
+Marker.ZIndex = 500000000
+
+Preview.Name = "Preview"
+Preview.Parent = ColorPicker
+Preview.AnchorPoint = Vector2.new(0.5, 0)
+Preview.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Preview.BorderColor3 = Color3.fromRGB(40, 40, 40)
+Preview.BorderSizePixel = 2
+Preview.Position = UDim2.new(0.5, 0, 0.800000012, 0)
+Preview.Size = UDim2.new(0.600000024, 0, 0.100000001, 0)
+Preview.ZIndex = 4
+Preview.SliceCenter = Rect.new(10, 10, 90, 90)
+
+Value.Name = "Value"
+Value.Parent = ColorPicker
+Value.AnchorPoint = Vector2.new(0.5, 0)
+Value.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Value.BorderColor3 = Color3.fromRGB(40, 40, 40)
+Value.BorderSizePixel = 2
+Value.Position = UDim2.new(0.850000024, 0, 0.100000001, 0)
+Value.Size = UDim2.new(0.100000001, 0, 0.600000024, 0)
+Value.ZIndex = 500000000
+Value.Image = "rbxassetid://359311684"
+Value.SliceCenter = Rect.new(10, 10, 90, 90)
+
+Marker_2.Name = "Marker"
+Marker_2.Parent = Value
+Marker_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Marker_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Marker_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Marker_2.BorderSizePixel = 2
+Marker_2.Position = UDim2.new(0.5, 0, 0, 0)
+Marker_2.Size = UDim2.new(1, 4, 0, 2)
+Marker_2.ZIndex = 500000000
+
+UICorner_5.CornerRadius = UDim.new(0, 25)
+UICorner_5.Parent = ColorPicker
+
+TextLabel_8.Parent = MainFrame
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0.334983498, 0, 0.954248369, 0)
+TextLabel_8.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_8.Font = Enum.Font.Ubuntu
+TextLabel_8.Text = "Contax V1.2.0"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
 
 Mouse.Name = "Mouse"
 Mouse.Parent = CBCheat
@@ -366,7 +391,7 @@ Mouse.Size = UDim2.new(0, 15, 0, 15)
 
 -- Scripts:
 
-local function HFEJ_fake_script() -- MainFrame.LocalScript 
+local function PTTST_fake_script() -- MainFrame.LocalScript 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local open = false
@@ -384,60 +409,8 @@ local function HFEJ_fake_script() -- MainFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HFEJ_fake_script)()
-local function KCANG_fake_script() -- ColorPicker.ColorMain 
-	local script = Instance.new('LocalScript', ColorPicker)
-
-	local player = game.Players.LocalPlayer
-	local mouse = player:GetMouse()
-	
-	local rgb = script.Parent:WaitForChild("RGB")
-	local value = script.Parent:WaitForChild("Value")
-	local preview = script.Parent:WaitForChild("Preview")
-	
-	local selectedColor = Color3.fromHSV(1,1,1)
-	local colorData = {1,1,1}
-	
-	local mouse1down = false
-	
-	local function setColor(hue,sat,val)
-		colorData = {hue or colorData[1],sat or colorData[2],val or colorData[3]}
-		selectedColor = Color3.fromHSV(colorData[1],colorData[2],colorData[3])
-		preview.BackgroundColor3 = selectedColor
-		value.ImageColor3 = Color3.fromHSV(colorData[1],colorData[2],1)
-	end
-	
-	local function inBounds(frame)
-		local x,y = mouse.X - frame.AbsolutePosition.X,mouse.Y - frame.AbsolutePosition.Y
-		local maxX,maxY = frame.AbsoluteSize.X,frame.AbsoluteSize.Y
-		if x >= 0 and y >= 0 and x <= maxX and y <= maxY then
-			return x/maxX,y/maxY
-		end
-	end
-	
-	local function updateRGB()
-		if mouse1Down then
-			local x,y = inBounds(rgb)
-			if x and y then
-				rgb:WaitForChild("Marker").Position = UDim2.new(x,0,y,0)
-				setColor(1 - x,1 - y)
-			end
-			
-			local x,y = inBounds(value)
-			if x and y then
-				value:WaitForChild("Marker").Position = UDim2.new(0.5,0,y,0)
-				setColor(nil,nil,1 - y)
-			end
-		end
-	end
-	
-	mouse.Move:connect(updateRGB)
-	
-	mouse.Button1Down:connect(function()mouse1Down = true end)
-	mouse.Button1Up:connect(function()mouse1Down = false end)
-end
-coroutine.wrap(KCANG_fake_script)()
-local function EWPA_fake_script() -- ESP.LocalScript 
+coroutine.wrap(PTTST_fake_script)()
+local function UFCCKJ_fake_script() -- ESP.LocalScript 
 	local script = Instance.new('LocalScript', ESP)
 
 	script.Parent.Activated:Connect(function()
@@ -447,8 +420,8 @@ local function EWPA_fake_script() -- ESP.LocalScript
 		script.Parent.Parent.Parent.Tabs[script.Parent.Name].Visible = true
 	end)
 end
-coroutine.wrap(EWPA_fake_script)()
-local function JYCXY_fake_script() -- Mods.LocalScript 
+coroutine.wrap(UFCCKJ_fake_script)()
+local function ZQDDIQE_fake_script() -- Mods.LocalScript 
 	local script = Instance.new('LocalScript', Mods)
 
 	script.Parent.Activated:Connect(function()
@@ -458,8 +431,90 @@ local function JYCXY_fake_script() -- Mods.LocalScript
 		script.Parent.Parent.Parent.Tabs[script.Parent.Name].Visible = true
 	end)
 end
-coroutine.wrap(JYCXY_fake_script)()
-local function FVJEDZ_fake_script() -- norecoil.ESP 
+coroutine.wrap(ZQDDIQE_fake_script)()
+local function MKES_fake_script() -- INFAMMO.ESP 
+	local script = Instance.new('LocalScript', INFAMMO)
+
+	local enabled = false
+	
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+		    enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+				if v:FindFirstChild("Ammo") then
+					if not v:FindFirstChild("OldValueAmmo") then
+						local oldvalue = Instance.new("NumberValue")
+						oldvalue.Value = v.Ammo.Value
+						oldvalue.Parent = v
+						oldvalue.Name = "OldValueAmmo"
+					end
+					v.Ammo.Value = 10000000
+				end
+				if v:FindFirstChild("StoredAmmo") then
+					if not v:FindFirstChild("OldValueStoredAmmo") then
+						local oldvalue = Instance.new("NumberValue")
+						oldvalue.Value = v.StoredAmmo.Value
+						oldvalue.Parent = v
+						oldvalue.Name = "OldValueStoredAmmo"
+					end
+					v.StoredAmmo.Value = 10000000
+				end
+			end
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255,255,255)
+			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+				if v:FindFirstChild("Ammo") then
+					if v:FindFirstChild("OldValueAmmo") then
+						v.Ammo.Value = v.OldValueAmmo.Value
+					end
+				end
+				if v:FindFirstChild("StoredAmmo") then
+					if v:FindFirstChild("OldValueStoredAmmo") then
+						v.StoredAmmo.Value = v.OldValueStoredAmmo.Value
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(MKES_fake_script)()
+local function AJVG_fake_script() -- fastfire.ESP 
+	local script = Instance.new('LocalScript', fastfire)
+
+	local enabled = false
+	
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+		    enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+				if v:FindFirstChild("FireRate") then
+					if not v:FindFirstChild("OldValueFireRate") then
+						local oldvalue = Instance.new("NumberValue")
+						oldvalue.Value = v.FireRate.Value
+						oldvalue.Parent = v
+						oldvalue.Name = "OldValueFireRate"
+					end
+					v.FireRate.Value = 0.005
+				end
+			end
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+				if v:FindFirstChild("FireRate") then
+					if v:FindFirstChild("OldValueFireRate") then
+						v.FireRate.Value = v.OldValueFireRate.Value
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(AJVG_fake_script)()
+local function JYMJGPL_fake_script() -- norecoil.ESP 
 	local script = Instance.new('LocalScript', norecoil)
 
 	local enabled = false
@@ -508,90 +563,8 @@ local function FVJEDZ_fake_script() -- norecoil.ESP
 		end
 	end)
 end
-coroutine.wrap(FVJEDZ_fake_script)()
-local function LHXKEK_fake_script() -- fastfire.ESP 
-	local script = Instance.new('LocalScript', fastfire)
-
-	local enabled = false
-	
-	script.Parent.Activated:Connect(function()
-		if not enabled then
-		    enabled = true
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
-			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-				if v:FindFirstChild("FireRate") then
-					if not v:FindFirstChild("OldValueFireRate") then
-						local oldvalue = Instance.new("NumberValue")
-						oldvalue.Value = v.FireRate.Value
-						oldvalue.Parent = v
-						oldvalue.Name = "OldValueFireRate"
-					end
-					v.FireRate.Value = 0.005
-				end
-			end
-		else
-			enabled = false
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-				if v:FindFirstChild("FireRate") then
-					if v:FindFirstChild("OldValueFireRate") then
-						v.FireRate.Value = v.OldValueFireRate.Value
-					end
-				end
-			end
-		end
-	end)
-end
-coroutine.wrap(LHXKEK_fake_script)()
-local function HDRUDH_fake_script() -- INFAMMO.ESP 
-	local script = Instance.new('LocalScript', INFAMMO)
-
-	local enabled = false
-	
-	script.Parent.Activated:Connect(function()
-		if not enabled then
-		    enabled = true
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
-			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-				if v:FindFirstChild("Ammo") then
-					if not v:FindFirstChild("OldValueAmmo") then
-						local oldvalue = Instance.new("NumberValue")
-						oldvalue.Value = v.Ammo.Value
-						oldvalue.Parent = v
-						oldvalue.Name = "OldValueAmmo"
-					end
-					v.Ammo.Value = 10000000
-				end
-				if v:FindFirstChild("StoredAmmo") then
-					if not v:FindFirstChild("OldValueStoredAmmo") then
-						local oldvalue = Instance.new("NumberValue")
-						oldvalue.Value = v.StoredAmmo.Value
-						oldvalue.Parent = v
-						oldvalue.Name = "OldValueStoredAmmo"
-					end
-					v.StoredAmmo.Value = 10000000
-				end
-			end
-		else
-			enabled = false
-			script.Parent.BackgroundColor3 = Color3.fromRGB(255,255,255)
-			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-				if v:FindFirstChild("Ammo") then
-					if v:FindFirstChild("OldValueAmmo") then
-						v.Ammo.Value = v.OldValueAmmo.Value
-					end
-				end
-				if v:FindFirstChild("StoredAmmo") then
-					if v:FindFirstChild("OldValueStoredAmmo") then
-						v.StoredAmmo.Value = v.OldValueStoredAmmo.Value
-					end
-				end
-			end
-		end
-	end)
-end
-coroutine.wrap(HDRUDH_fake_script)()
-local function PKTQ_fake_script() -- Chams.ESP 
+coroutine.wrap(JYMJGPL_fake_script)()
+local function UNFRWMH_fake_script() -- Chams.ESP 
 	local script = Instance.new('LocalScript', Chams)
 
 	local enabled = false
@@ -640,8 +613,8 @@ local function PKTQ_fake_script() -- Chams.ESP
 		end
 	end)
 end
-coroutine.wrap(PKTQ_fake_script)()
-local function KQMP_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(UNFRWMH_fake_script)()
+local function POMCDK_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local activated = false
@@ -656,8 +629,8 @@ local function KQMP_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KQMP_fake_script)()
-local function TIAGDTH_fake_script() -- DistanceESP.ESP 
+coroutine.wrap(POMCDK_fake_script)()
+local function TVES_fake_script() -- DistanceESP.ESP 
 	local script = Instance.new('LocalScript', DistanceESP)
 
 	local enabled = false
@@ -713,8 +686,8 @@ local function TIAGDTH_fake_script() -- DistanceESP.ESP
 		end
 	end)
 end
-coroutine.wrap(TIAGDTH_fake_script)()
-local function VNISUZK_fake_script() -- NameESP.ESP 
+coroutine.wrap(TVES_fake_script)()
+local function NBOU_fake_script() -- NameESP.ESP 
 	local script = Instance.new('LocalScript', NameESP)
 
 	local enabled = false
@@ -769,8 +742,113 @@ local function VNISUZK_fake_script() -- NameESP.ESP
 		end
 	end)
 end
-coroutine.wrap(VNISUZK_fake_script)()
-local function FXNG_fake_script() -- Mouse.LocalScript 
+coroutine.wrap(NBOU_fake_script)()
+local function FOHM_fake_script() -- Tracers.ESP 
+	local script = Instance.new('LocalScript', Tracers)
+
+	local enabled = false
+	
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+			enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if enabled then
+			for _, v in pairs(game.Players:GetChildren()) do
+				if v.Character then
+					if v:IsA("Player") then
+						if v.Name ~= game.Players.LocalPlayer.Name then
+							if v.Team ~= game.Players.LocalPlayer.Team then
+								local tracer = Instance.new("Part")
+								local dist = (game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p+v.Character.LowerTorso.CFrame.p).magnitude
+								tracer.Parent = game.Workspace
+								tracer.Anchored = true
+								tracer.CanCollide = false
+								tracer.Color = Color3.fromRGB(255, 0, 0)
+								tracer.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p,v.Character.LowerTorso.CFrame.p)*CFrame.new(0,0,-dist/2)
+								tracer.Size = Vector3.new(0.1,0.1,dist)
+								tracer.Transparency = 1
+								local esp = Instance.new("BoxHandleAdornment")
+								esp.Color3 = script.Parent.Parent.Parent.ColorPicker.Preview.BackgroundColor3
+								esp.Parent = tracer
+								esp.Adornee = tracer
+								esp.AlwaysOnTop = true
+								esp.ZIndex = 2
+								esp.Size = tracer.Size
+								game.Debris:AddItem(tracer,0.01)
+								for _, e in pairs(v.Character:GetChildren()) do
+									if e:IsA("Accessory") then
+										e.Handle.Size = Vector3.new(0,0,0)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(FOHM_fake_script)()
+local function RTZQX_fake_script() -- ColorPicker.ColorMain 
+	local script = Instance.new('LocalScript', ColorPicker)
+
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	
+	local rgb = script.Parent:WaitForChild("RGB")
+	local value = script.Parent:WaitForChild("Value")
+	local preview = script.Parent:WaitForChild("Preview")
+	
+	local selectedColor = Color3.fromHSV(1,1,1)
+	local colorData = {1,1,1}
+	
+	local mouse1down = false
+	
+	local function setColor(hue,sat,val)
+		colorData = {hue or colorData[1],sat or colorData[2],val or colorData[3]}
+		selectedColor = Color3.fromHSV(colorData[1],colorData[2],colorData[3])
+		preview.BackgroundColor3 = selectedColor
+		value.ImageColor3 = Color3.fromHSV(colorData[1],colorData[2],1)
+	end
+	
+	local function inBounds(frame)
+		local x,y = mouse.X - frame.AbsolutePosition.X,mouse.Y - frame.AbsolutePosition.Y
+		local maxX,maxY = frame.AbsoluteSize.X,frame.AbsoluteSize.Y
+		if x >= 0 and y >= 0 and x <= maxX and y <= maxY then
+			return x/maxX,y/maxY
+		end
+	end
+	
+	local function updateRGB()
+		if mouse1Down then
+			local x,y = inBounds(rgb)
+			if x and y then
+				rgb:WaitForChild("Marker").Position = UDim2.new(x,0,y,0)
+				setColor(1 - x,1 - y)
+			end
+			
+			local x,y = inBounds(value)
+			if x and y then
+				value:WaitForChild("Marker").Position = UDim2.new(0.5,0,y,0)
+				setColor(nil,nil,1 - y)
+			end
+		end
+	end
+	
+	mouse.Move:connect(updateRGB)
+	
+	mouse.Button1Down:connect(function()mouse1Down = true end)
+	mouse.Button1Up:connect(function()mouse1Down = false end)
+end
+coroutine.wrap(RTZQX_fake_script)()
+local function GKYEP_fake_script() -- Mouse.LocalScript 
 	local script = Instance.new('LocalScript', Mouse)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -784,4 +862,4 @@ local function FXNG_fake_script() -- Mouse.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FXNG_fake_script)()
+coroutine.wrap(GKYEP_fake_script)()
