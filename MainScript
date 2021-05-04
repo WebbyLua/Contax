@@ -15,6 +15,8 @@ local UICorner_3 = Instance.new("UICorner")
 local Mods = Instance.new("ImageButton")
 local UICorner_4 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
+local Rage = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
 local Tabs = Instance.new("Frame")
 local Mods_2 = Instance.new("Frame")
 local UIGridLayout = Instance.new("UIGridLayout")
@@ -41,8 +43,24 @@ local Marker = Instance.new("Frame")
 local Preview = Instance.new("ImageLabel")
 local Value = Instance.new("ImageLabel")
 local Marker_2 = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
+local Rage_2 = Instance.new("Frame")
+local UIGridLayout_3 = Instance.new("UIGridLayout")
+local INFAMMO_2 = Instance.new("TextButton")
 local TextLabel_8 = Instance.new("TextLabel")
+local INFAMMO_3 = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local INFAMMO_4 = Instance.new("TextButton")
+local TextLabel_10 = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local Slider = Instance.new("Frame")
+local Button = Instance.new("ImageButton")
+local fov = Instance.new("TextLabel")
+local INFAMMO_5 = Instance.new("TextButton")
+local TextLabel_11 = Instance.new("TextLabel")
+local TP = Instance.new("TextButton")
+local TextLabel_12 = Instance.new("TextLabel")
+local TextLabel_13 = Instance.new("TextLabel")
 local Mouse = Instance.new("Frame")
 
 --Properties:
@@ -108,6 +126,15 @@ UIListLayout.Parent = SideBar
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 5)
+
+Rage.Name = "Rage"
+Rage.Parent = SideBar
+Rage.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Rage.Position = UDim2.new(0.272727281, 0, 0.33006537, 0)
+Rage.Size = UDim2.new(0, 50, 0, 50)
+Rage.Image = "http://www.roblox.com/asset/?id=6332980598"
+
+UICorner_5.Parent = Rage
 
 Tabs.Name = "Tabs"
 Tabs.Parent = Frame
@@ -200,6 +227,7 @@ ESP_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ESP_2.BackgroundTransparency = 1.000
 ESP_2.Position = UDim2.new(-0.0140000004, 0, 0, 0)
 ESP_2.Size = UDim2.new(1.01400006, 0, 1, 0)
+ESP_2.Visible = false
 
 UIGridLayout_2.Parent = ESP_2
 UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
@@ -366,20 +394,175 @@ Marker_2.Position = UDim2.new(0.5, 0, 0, 0)
 Marker_2.Size = UDim2.new(1, 4, 0, 2)
 Marker_2.ZIndex = 500000000
 
-UICorner_5.CornerRadius = UDim.new(0, 25)
-UICorner_5.Parent = ColorPicker
+UICorner_6.CornerRadius = UDim.new(0, 25)
+UICorner_6.Parent = ColorPicker
 
-TextLabel_8.Parent = MainFrame
+Rage_2.Name = "Rage"
+Rage_2.Parent = Tabs
+Rage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rage_2.BackgroundTransparency = 1.000
+Rage_2.Position = UDim2.new(-0.0140000004, 0, 0, 0)
+Rage_2.Size = UDim2.new(1.01400006, 0, 1, 0)
+
+UIGridLayout_3.Parent = Rage_2
+UIGridLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_3.CellPadding = UDim2.new(0, 175, 0, 15)
+UIGridLayout_3.CellSize = UDim2.new(0, 25, 0, 25)
+
+INFAMMO_2.Name = "INFAMMO"
+INFAMMO_2.Parent = Rage_2
+INFAMMO_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFAMMO_2.BorderSizePixel = 0
+INFAMMO_2.Size = UDim2.new(0, 200, 0, 50)
+INFAMMO_2.Font = Enum.Font.SourceSans
+INFAMMO_2.Text = ""
+INFAMMO_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFAMMO_2.TextSize = 14.000
+
+TextLabel_8.Parent = INFAMMO_2
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.Position = UDim2.new(0.334983498, 0, 0.954248369, 0)
-TextLabel_8.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_8.Position = UDim2.new(1, 0, 0, 0)
+TextLabel_8.Size = UDim2.new(0, 137, 0, 25)
 TextLabel_8.Font = Enum.Font.Ubuntu
-TextLabel_8.Text = "Contax V1.2.0"
+TextLabel_8.Text = "Kill All"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 14.000
 TextLabel_8.TextWrapped = true
+
+INFAMMO_3.Name = "INFAMMO"
+INFAMMO_3.Parent = Rage_2
+INFAMMO_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFAMMO_3.BorderSizePixel = 0
+INFAMMO_3.Size = UDim2.new(0, 200, 0, 50)
+INFAMMO_3.Font = Enum.Font.SourceSans
+INFAMMO_3.Text = ""
+INFAMMO_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFAMMO_3.TextSize = 14.000
+
+TextLabel_9.Parent = INFAMMO_3
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(1, 0, 0, 0)
+TextLabel_9.Size = UDim2.new(0, 137, 0, 25)
+TextLabel_9.Font = Enum.Font.Ubuntu
+TextLabel_9.Text = "AutoShoot"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+
+INFAMMO_4.Name = "INFAMMO"
+INFAMMO_4.Parent = Rage_2
+INFAMMO_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFAMMO_4.BorderSizePixel = 0
+INFAMMO_4.Size = UDim2.new(0, 200, 0, 50)
+INFAMMO_4.Font = Enum.Font.SourceSans
+INFAMMO_4.Text = ""
+INFAMMO_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFAMMO_4.TextSize = 14.000
+
+TextLabel_10.Parent = INFAMMO_4
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(1, 0, 0, 0)
+TextLabel_10.Size = UDim2.new(0, 137, 0, 25)
+TextLabel_10.Font = Enum.Font.Ubuntu
+TextLabel_10.Text = "AntiAim"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+
+Frame_2.Parent = Rage_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Size = UDim2.new(0, 100, 0, 100)
+
+Slider.Name = "Slider"
+Slider.Parent = Frame_2
+Slider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Slider.BorderSizePixel = 0
+Slider.Position = UDim2.new(0.100000001, 0, 0.151972041, -10)
+Slider.Size = UDim2.new(4.76000071, 0, -0.151972041, 20)
+
+Button.Name = "Button"
+Button.Parent = Slider
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0, 0, -0.5, 0)
+Button.Size = UDim2.new(0, 10, 2, 0)
+
+fov.Name = "fov"
+fov.Parent = Slider
+fov.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fov.BackgroundTransparency = 1.000
+fov.Position = UDim2.new(0, 0, 1.68778896, 0)
+fov.Size = UDim2.new(1, 0, 1, 0)
+fov.Font = Enum.Font.Ubuntu
+fov.Text = "AA Turn"
+fov.TextColor3 = Color3.fromRGB(255, 255, 255)
+fov.TextScaled = true
+fov.TextSize = 14.000
+fov.TextWrapped = true
+
+INFAMMO_5.Name = "INFAMMO"
+INFAMMO_5.Parent = Rage_2
+INFAMMO_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFAMMO_5.BorderSizePixel = 0
+INFAMMO_5.Size = UDim2.new(0, 200, 0, 50)
+INFAMMO_5.Font = Enum.Font.SourceSans
+INFAMMO_5.Text = ""
+INFAMMO_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFAMMO_5.TextSize = 14.000
+
+TextLabel_11.Parent = INFAMMO_5
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(1, 0, 0, 0)
+TextLabel_11.Size = UDim2.new(0, 137, 0, 25)
+TextLabel_11.Font = Enum.Font.Ubuntu
+TextLabel_11.Text = "Camera Follows Head"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
+
+TP.Name = "TP"
+TP.Parent = Rage_2
+TP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TP.BorderSizePixel = 0
+TP.Size = UDim2.new(0, 200, 0, 50)
+TP.Font = Enum.Font.SourceSans
+TP.Text = ""
+TP.TextColor3 = Color3.fromRGB(0, 0, 0)
+TP.TextSize = 14.000
+
+TextLabel_12.Parent = TP
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(1, 0, 0, 0)
+TextLabel_12.Size = UDim2.new(0, 137, 0, 25)
+TextLabel_12.Font = Enum.Font.Ubuntu
+TextLabel_12.Text = "Thirdperson"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 14.000
+TextLabel_12.TextWrapped = true
+
+TextLabel_13.Parent = MainFrame
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0.334983498, 0, 0.954248369, 0)
+TextLabel_13.Size = UDim2.new(0, 200, 0, 14)
+TextLabel_13.Font = Enum.Font.Ubuntu
+TextLabel_13.Text = "Contax V1.2.0"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextWrapped = true
 
 Mouse.Name = "Mouse"
 Mouse.Parent = CBCheat
@@ -391,12 +574,12 @@ Mouse.Size = UDim2.new(0, 15, 0, 15)
 
 -- Scripts:
 
-local function PTTST_fake_script() -- MainFrame.LocalScript 
+local function GXEPH_fake_script() -- MainFrame.LocalScript 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local open = false
 	local uis = game:GetService("UserInputService")
-	
+
 	uis.InputBegan:Connect(function(key, processed)
 		if key.KeyCode == Enum.KeyCode.Insert then
 			if not open then
@@ -409,8 +592,8 @@ local function PTTST_fake_script() -- MainFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PTTST_fake_script)()
-local function UFCCKJ_fake_script() -- ESP.LocalScript 
+coroutine.wrap(GXEPH_fake_script)()
+local function LAOYMV_fake_script() -- ESP.LocalScript 
 	local script = Instance.new('LocalScript', ESP)
 
 	script.Parent.Activated:Connect(function()
@@ -420,8 +603,8 @@ local function UFCCKJ_fake_script() -- ESP.LocalScript
 		script.Parent.Parent.Parent.Tabs[script.Parent.Name].Visible = true
 	end)
 end
-coroutine.wrap(UFCCKJ_fake_script)()
-local function ZQDDIQE_fake_script() -- Mods.LocalScript 
+coroutine.wrap(LAOYMV_fake_script)()
+local function WRFLY_fake_script() -- Mods.LocalScript 
 	local script = Instance.new('LocalScript', Mods)
 
 	script.Parent.Activated:Connect(function()
@@ -431,15 +614,26 @@ local function ZQDDIQE_fake_script() -- Mods.LocalScript
 		script.Parent.Parent.Parent.Tabs[script.Parent.Name].Visible = true
 	end)
 end
-coroutine.wrap(ZQDDIQE_fake_script)()
-local function MKES_fake_script() -- INFAMMO.ESP 
+coroutine.wrap(WRFLY_fake_script)()
+local function ZAEEF_fake_script() -- Rage.LocalScript 
+	local script = Instance.new('LocalScript', Rage)
+
+	script.Parent.Activated:Connect(function()
+		for _, v in pairs(script.Parent.Parent.Parent.Tabs:GetChildren()) do
+			v.Visible = false
+		end
+		script.Parent.Parent.Parent.Tabs[script.Parent.Name].Visible = true
+	end)
+end
+coroutine.wrap(ZAEEF_fake_script)()
+local function FARNHK_fake_script() -- INFAMMO.ESP 
 	local script = Instance.new('LocalScript', INFAMMO)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
-		    enabled = true
+			enabled = true
 			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
 			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
 				if v:FindFirstChild("Ammo") then
@@ -479,15 +673,15 @@ local function MKES_fake_script() -- INFAMMO.ESP
 		end
 	end)
 end
-coroutine.wrap(MKES_fake_script)()
-local function AJVG_fake_script() -- fastfire.ESP 
+coroutine.wrap(FARNHK_fake_script)()
+local function NRMHPWZ_fake_script() -- fastfire.ESP 
 	local script = Instance.new('LocalScript', fastfire)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
-		    enabled = true
+			enabled = true
 			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
 			for _, v in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
 				if v:FindFirstChild("FireRate") then
@@ -512,13 +706,18 @@ local function AJVG_fake_script() -- fastfire.ESP
 			end
 		end
 	end)
+
+	--[[:GetService("RunService").RenderStepped:Connect(function()
+		local client = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
+		client.resetaccuracy()
+	end)]]
 end
-coroutine.wrap(AJVG_fake_script)()
-local function JYMJGPL_fake_script() -- norecoil.ESP 
+coroutine.wrap(NRMHPWZ_fake_script)()
+local function VDXK_fake_script() -- norecoil.ESP 
 	local script = Instance.new('LocalScript', norecoil)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
 			enabled = true
@@ -563,12 +762,12 @@ local function JYMJGPL_fake_script() -- norecoil.ESP
 		end
 	end)
 end
-coroutine.wrap(JYMJGPL_fake_script)()
-local function UNFRWMH_fake_script() -- Chams.ESP 
+coroutine.wrap(VDXK_fake_script)()
+local function GEISC_fake_script() -- Chams.ESP 
 	local script = Instance.new('LocalScript', Chams)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
 			enabled = true
@@ -578,7 +777,7 @@ local function UNFRWMH_fake_script() -- Chams.ESP
 			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		end
 	end)
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if enabled then
 			for _, v in pairs(game.Players:GetChildren()) do
@@ -586,23 +785,18 @@ local function UNFRWMH_fake_script() -- Chams.ESP
 					if v:IsA("Player") then
 						if v.Name ~= game.Players.LocalPlayer.Name then
 							if v.Team ~= game.Players.LocalPlayer.Team then
-								local esp = Instance.new("BoxHandleAdornment")
-								esp.Color3 = script.Parent.Parent.Parent.ColorPicker.Preview.BackgroundColor3
-								esp.Parent = v.Character.Head
-								esp.Adornee = v.Character.Head
-								esp.AlwaysOnTop = true
-								esp.ZIndex = 2
-								game:GetService("Debris"):AddItem(esp,0.1)
-								for _, e in pairs(v.Character:GetChildren()) do
-									if e:IsA("Part") or e:IsA("MeshPart") then
-										local esp = Instance.new("BoxHandleAdornment")
-										esp.Parent = e
-										esp.ZIndex = 2
-										esp.AlwaysOnTop = true
-										esp.Adornee = e
-										esp.Size = e.Size
-										esp.Color3 = script.Parent.Parent.Parent.ColorPicker.Preview.BackgroundColor3
-										game:GetService("Debris"):AddItem(esp,0.1)
+								if v.Character ~= nil and v.Character.LowerTorso ~= nil then
+									for _, e in pairs(v.Character:GetChildren()) do
+										if e:IsA("Part") or e:IsA("MeshPart") then
+											local esp = Instance.new("BoxHandleAdornment")
+											esp.Parent = e
+											esp.ZIndex = 2
+											esp.AlwaysOnTop = true
+											esp.Adornee = e
+											esp.Size = e.Size
+											esp.Color3 = script.Parent.Parent.Parent.ColorPicker.Preview.BackgroundColor3
+											game:GetService("Debris"):AddItem(esp,0.1)
+										end
 									end
 								end
 							end
@@ -613,12 +807,12 @@ local function UNFRWMH_fake_script() -- Chams.ESP
 		end
 	end)
 end
-coroutine.wrap(UNFRWMH_fake_script)()
-local function POMCDK_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(GEISC_fake_script)()
+local function EVYAB_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local activated = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not activated then
 			activated = true
@@ -629,12 +823,12 @@ local function POMCDK_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(POMCDK_fake_script)()
-local function TVES_fake_script() -- DistanceESP.ESP 
+coroutine.wrap(EVYAB_fake_script)()
+local function DNXGJA_fake_script() -- DistanceESP.ESP 
 	local script = Instance.new('LocalScript', DistanceESP)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
 			enabled = true
@@ -644,7 +838,7 @@ local function TVES_fake_script() -- DistanceESP.ESP
 			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		end
 	end)
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if enabled then
 			for _, v in pairs(game.Players:GetChildren()) do
@@ -657,14 +851,14 @@ local function TVES_fake_script() -- DistanceESP.ESP
 										local magtude = (game.Workspace.CurrentCamera.CFrame.p - v.Character.HumanoidRootPart.CFrame.p).Magnitude
 										local BillboardGui = Instance.new("BillboardGui")
 										local TextLabel = Instance.new("TextLabel")
-	
+
 										BillboardGui.Parent = v.Character.HumanoidRootPart
 										BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 										BillboardGui.Active = true
 										BillboardGui.AlwaysOnTop = true
 										BillboardGui.Size = UDim2.new(4, 0, 2, 0)
 										BillboardGui.StudsOffsetWorldSpace = Vector3.new(0, -4, 0)
-	
+
 										TextLabel.Parent = BillboardGui
 										TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 										TextLabel.BackgroundTransparency = 1.000
@@ -686,12 +880,12 @@ local function TVES_fake_script() -- DistanceESP.ESP
 		end
 	end)
 end
-coroutine.wrap(TVES_fake_script)()
-local function NBOU_fake_script() -- NameESP.ESP 
+coroutine.wrap(DNXGJA_fake_script)()
+local function JOUBT_fake_script() -- NameESP.ESP 
 	local script = Instance.new('LocalScript', NameESP)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
 			enabled = true
@@ -701,7 +895,7 @@ local function NBOU_fake_script() -- NameESP.ESP
 			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		end
 	end)
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if enabled then
 			for _, v in pairs(game.Players:GetChildren()) do
@@ -713,14 +907,14 @@ local function NBOU_fake_script() -- NameESP.ESP
 									if v.Character:FindFirstChild("HumanoidRootPart") then
 										local BillboardGui = Instance.new("BillboardGui")
 										local TextLabel = Instance.new("TextLabel")
-	
+
 										BillboardGui.Parent = v.Character.HumanoidRootPart
 										BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 										BillboardGui.Active = true
 										BillboardGui.AlwaysOnTop = true
 										BillboardGui.Size = UDim2.new(4, 0, 2, 0)
 										BillboardGui.StudsOffsetWorldSpace = Vector3.new(0, 3.5, 0)
-	
+
 										TextLabel.Parent = BillboardGui
 										TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 										TextLabel.BackgroundTransparency = 1.000
@@ -742,12 +936,12 @@ local function NBOU_fake_script() -- NameESP.ESP
 		end
 	end)
 end
-coroutine.wrap(NBOU_fake_script)()
-local function FOHM_fake_script() -- Tracers.ESP 
+coroutine.wrap(JOUBT_fake_script)()
+local function MRQF_fake_script() -- Tracers.ESP 
 	local script = Instance.new('LocalScript', Tracers)
 
 	local enabled = false
-	
+
 	script.Parent.Activated:Connect(function()
 		if not enabled then
 			enabled = true
@@ -757,7 +951,7 @@ local function FOHM_fake_script() -- Tracers.ESP
 			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		end
 	end)
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function()
 		if enabled then
 			for _, v in pairs(game.Players:GetChildren()) do
@@ -765,26 +959,27 @@ local function FOHM_fake_script() -- Tracers.ESP
 					if v:IsA("Player") then
 						if v.Name ~= game.Players.LocalPlayer.Name then
 							if v.Team ~= game.Players.LocalPlayer.Team then
-								local tracer = Instance.new("Part")
-								local dist = (game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p+v.Character.LowerTorso.CFrame.p).magnitude
-								tracer.Parent = game.Workspace
-								tracer.Anchored = true
-								tracer.CanCollide = false
-								tracer.Color = Color3.fromRGB(255, 0, 0)
-								tracer.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p,v.Character.LowerTorso.CFrame.p)*CFrame.new(0,0,-dist/2)
-								tracer.Size = Vector3.new(0.1,0.1,dist)
-								tracer.Transparency = 1
-								local esp = Instance.new("BoxHandleAdornment")
-								esp.Color3 = script.Parent.Parent.Parent.ColorPicker.Preview.BackgroundColor3
-								esp.Parent = tracer
-								esp.Adornee = tracer
-								esp.AlwaysOnTop = true
-								esp.ZIndex = 2
-								esp.Size = tracer.Size
-								game.Debris:AddItem(tracer,0.01)
-								for _, e in pairs(v.Character:GetChildren()) do
-									if e:IsA("Accessory") then
-										e.Handle.Size = Vector3.new(0,0,0)
+								if v.Character ~= nil then
+									if game.Players.LocalPlayer.Character ~= nil then
+										if v.Character.LowerTorso ~= nil then
+											local tracer = Instance.new("Part")
+											local dist = (game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p+v.Character.LowerTorso.CFrame.p).magnitude
+											tracer.Parent = game.Workspace
+											tracer.Anchored = true
+											tracer.CanCollide = false
+											tracer.Color = Color3.fromRGB(255, 0, 0)
+											tracer.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p,v.Character.LowerTorso.CFrame.p)*CFrame.new(0,0,-dist/2)
+											tracer.Size = Vector3.new(0.1,0.1,dist)
+											tracer.Transparency = 1
+											local esp = Instance.new("BoxHandleAdornment")
+											esp.Color3 = script.Parent.Parent.Parent.ColorPicker.Preview.BackgroundColor3
+											esp.Parent = tracer
+											esp.Adornee = tracer
+											esp.AlwaysOnTop = true
+											esp.ZIndex = 2
+											esp.Size = tracer.Size
+											game.Debris:AddItem(tracer,0.01)
+										end
 									end
 								end
 							end
@@ -795,29 +990,29 @@ local function FOHM_fake_script() -- Tracers.ESP
 		end
 	end)
 end
-coroutine.wrap(FOHM_fake_script)()
-local function RTZQX_fake_script() -- ColorPicker.ColorMain 
+coroutine.wrap(MRQF_fake_script)()
+local function TSRBAC_fake_script() -- ColorPicker.ColorMain 
 	local script = Instance.new('LocalScript', ColorPicker)
 
 	local player = game.Players.LocalPlayer
 	local mouse = player:GetMouse()
-	
+
 	local rgb = script.Parent:WaitForChild("RGB")
 	local value = script.Parent:WaitForChild("Value")
 	local preview = script.Parent:WaitForChild("Preview")
-	
+
 	local selectedColor = Color3.fromHSV(1,1,1)
 	local colorData = {1,1,1}
-	
+
 	local mouse1down = false
-	
+
 	local function setColor(hue,sat,val)
 		colorData = {hue or colorData[1],sat or colorData[2],val or colorData[3]}
 		selectedColor = Color3.fromHSV(colorData[1],colorData[2],colorData[3])
 		preview.BackgroundColor3 = selectedColor
 		value.ImageColor3 = Color3.fromHSV(colorData[1],colorData[2],1)
 	end
-	
+
 	local function inBounds(frame)
 		local x,y = mouse.X - frame.AbsolutePosition.X,mouse.Y - frame.AbsolutePosition.Y
 		local maxX,maxY = frame.AbsoluteSize.X,frame.AbsoluteSize.Y
@@ -825,7 +1020,7 @@ local function RTZQX_fake_script() -- ColorPicker.ColorMain
 			return x/maxX,y/maxY
 		end
 	end
-	
+
 	local function updateRGB()
 		if mouse1Down then
 			local x,y = inBounds(rgb)
@@ -833,7 +1028,7 @@ local function RTZQX_fake_script() -- ColorPicker.ColorMain
 				rgb:WaitForChild("Marker").Position = UDim2.new(x,0,y,0)
 				setColor(1 - x,1 - y)
 			end
-			
+
 			local x,y = inBounds(value)
 			if x and y then
 				value:WaitForChild("Marker").Position = UDim2.new(0.5,0,y,0)
@@ -841,18 +1036,264 @@ local function RTZQX_fake_script() -- ColorPicker.ColorMain
 			end
 		end
 	end
-	
+
 	mouse.Move:connect(updateRGB)
-	
+
 	mouse.Button1Down:connect(function()mouse1Down = true end)
 	mouse.Button1Up:connect(function()mouse1Down = false end)
 end
-coroutine.wrap(RTZQX_fake_script)()
-local function GKYEP_fake_script() -- Mouse.LocalScript 
+coroutine.wrap(TSRBAC_fake_script)()
+local function DYAYM_fake_script() -- INFAMMO_2.ESP 
+	local script = Instance.new('LocalScript', INFAMMO_2)
+
+	local enabled = false
+
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+			enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if enabled then
+			for _, v in pairs(game.Players:GetChildren()) do
+				if v.Team ~= game.Players.LocalPlayer.Team then
+					if v.Character ~= nil and v.Character.Head ~= nil then
+						local Remote = game.ReplicatedStorage.Events['HitPart']
+						local Arguments = {
+							[1] = workspace[v.Name].Head,
+							[2] = workspace[v.Name].Head.Position,
+							[3] = workspace[game.Players.LocalPlayer.Name].EquippedTool.Value,
+							[4] = math.rad(1,100000),
+							[5] = workspace[game.Players.LocalPlayer.Name].Gun,
+							[8] = 8, --damage multiplier
+							[9] = false,
+							[10] = false,
+							[11] = Vector3.new(),
+							[12] = math.rad(1,100000),
+							[13] = Vector3.new()
+						}
+
+						Remote:FireServer(unpack(Arguments))
+						Remote:FireServer(unpack(Arguments))
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(DYAYM_fake_script)()
+local function GLQVQO_fake_script() -- INFAMMO_3.ESP 
+	local script = Instance.new('LocalScript', INFAMMO_3)
+
+	wait(0.2)
+	local enabled = false
+	local deb = false
+
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+			enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+
+	while wait(0.08) do
+		if enabled then
+			for _, v in pairs(game.Players:GetChildren()) do
+				if v.Team ~= game.Players.LocalPlayer.Team then
+					if v.Character ~= nil and v.Character.Head ~= nil then
+						if not deb then
+							local client = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
+							local ray = Ray.new(
+								game.Players.LocalPlayer.Character.Head.Position,
+								(v.Character.Head.Position-game.Players.LocalPlayer.Character.Head.Position).unit*5000000
+							) 
+							local ignore=game.Players.LocalPlayer.Character
+							local part,position,normal=workspace:FindPartOnRay(ray,ignore)
+							if part then
+								if part.Parent:FindFirstChild("Humanoid") then
+									if part.Name == v.Name then
+										print(part.Name)
+										-- this shit was made by sjors good shit >:) --
+										local Remote = game.ReplicatedStorage.Events['HitPart']
+										local Arguments = {
+											[1] = workspace[part.Parent.Name].Head,
+											[2] = workspace[part.Parent.Name].Head.Position,
+											[3] = workspace[game.Players.LocalPlayer.Name].EquippedTool.Value,
+											[4] = math.rad(1,100000),
+											[5] = workspace[game.Players.LocalPlayer.Name].Gun, --gun
+											[8] = 10, --damage multiplier
+											[9] = false,
+											[10] = false,
+											[11] = Vector3.new(),
+											[12] = math.rad(1,100000),
+											[13] = Vector3.new()
+										}
+										Remote:FireServer(unpack(Arguments))
+										client.firebullet()
+										client.resetaccuracy()
+										for _, e in pairs(v.Character:GetChildren()) do
+											if e:IsA("Accessory") then
+												e.Handle.Size = Vector3.new(0,0,0)
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+coroutine.wrap(GLQVQO_fake_script)()
+local function CDDQL_fake_script() -- INFAMMO_4.ESP 
+	local script = Instance.new('LocalScript', INFAMMO_4)
+
+	wait(0.2)
+	local enabled = false
+	local deb = false
+
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+			enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+	game["Run Service"].RenderStepped:Connect(function()
+		if enabled then
+			game.ReplicatedStorage.Events.ControlTurn:FireServer(-game.ReplicatedStorage.aapitch.Value, false)
+		end
+	end)
+end
+coroutine.wrap(CDDQL_fake_script)()
+local function ZAVJEV_fake_script() -- Slider.Handler 
+	local script = Instance.new('LocalScript', Slider)
+
+	local Slider = script.Parent
+	local SliderBtn = Slider.Button
+	local Player = game:GetService("Players").LocalPlayer
+	local UIS = game:GetService("UserInputService")
+	local RuS = game:GetService("RunService")
+	local urururur = Instance.new("NumberValue")
+	urururur.Parent = game.ReplicatedStorage
+	urururur.Name = "aapitch"
+	-- Properties
+	local held = false
+	local step = 0.001
+	local percentage = 0
+
+	function snap(number, factor)
+		if factor == 0 then
+			return number
+		else
+			return math.floor(number/factor+0.5)*factor
+		end
+	end
+
+	UIS.InputEnded:connect(function(input, processed)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			held = false
+		end
+	end)
+
+	SliderBtn.MouseButton1Down:connect(function()
+		held = true
+	end)
+
+	RuS.RenderStepped:connect(function(delta)
+		if held then
+			local MousePos = UIS:GetMouseLocation().X
+			local BtnPos = SliderBtn.Position
+			local SliderSize = Slider.AbsoluteSize.X
+			local SliderPos = Slider.AbsolutePosition.X
+			local pos = snap((MousePos-SliderPos)/SliderSize,step)
+			percentage = math.clamp(pos,0,1)
+			SliderBtn.Position = UDim2.new(percentage,0,BtnPos.Y.Scale, BtnPos.Y.Offset)
+			urururur.Value = percentage*1.5
+		end
+	end)
+end
+coroutine.wrap(ZAVJEV_fake_script)()
+local function RMEEB_fake_script() -- fov.LocalScript 
+	local script = Instance.new('LocalScript', fov)
+
+	game:GetService("RunService").RenderStepped:Connect(function()
+		script.Parent.Text = "AA Pitch = "..game.ReplicatedStorage.aapitch.Value
+	end)
+end
+coroutine.wrap(RMEEB_fake_script)()
+local function GYNA_fake_script() -- INFAMMO_5.ESP 
+	local script = Instance.new('LocalScript', INFAMMO_5)
+
+	wait(0.2)
+	local enabled = false
+	local deb = false
+
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+			enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+
+	game["Run Service"].RenderStepped:Connect(function()
+		if enabled then
+			game.ReplicatedStorage.Events.ReplicateCamera:FireServer(game.Players.LocalPlayer.Character.Head.CFrame)
+		end
+	end)
+end
+coroutine.wrap(GYNA_fake_script)()
+local function PUAVX_fake_script() -- TP.ESP 
+	local script = Instance.new('LocalScript', TP)
+
+	wait(0.2)
+	local enabled = false
+	local deb = false
+
+	script.Parent.Activated:Connect(function()
+		if not enabled then
+			enabled = true
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 154, 12)
+		else
+			enabled = false
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if enabled then
+			game.Players.LocalPlayer.CameraMode = "Classic"
+			game.Workspace.CurrentCamera.FieldOfView = 85
+			game.Players.LocalPlayer.CameraMaxZoomDistance = 10
+			game.Players.LocalPlayer.CameraMinZoomDistance = 10
+		else
+			game.Players.LocalPlayer.CameraMode = "LockFirstPerson"
+			game.Players.LocalPlayer.CameraMaxZoomDistance = 0
+			game.Players.LocalPlayer.CameraMinZoomDistance = 0
+		end
+	end)
+end
+coroutine.wrap(PUAVX_fake_script)()
+local function DUJQGVP_fake_script() -- Mouse.LocalScript 
 	local script = Instance.new('LocalScript', Mouse)
 
 	local mouse = game.Players.LocalPlayer:GetMouse()
-	
+
 	game:GetService("RunService").RenderStepped:Connect(function()
 		script.Parent.Position = UDim2.new(0,mouse.X,0,mouse.Y)
 		if script.Parent.Parent.MainFrame.Visible then
@@ -862,4 +1303,4 @@ local function GKYEP_fake_script() -- Mouse.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GKYEP_fake_script)()
+coroutine.wrap(DUJQGVP_fake_script)()
